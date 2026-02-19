@@ -12,7 +12,10 @@
     "dev": "tsup src/index.ts --format esm --watch",
     "prepublishOnly": "npm run build",
     "start": "node dist/index.js",
-    "prepare": "husky"
+    "prepare": "husky",
+    "lint": "tsc --noEmit",
+    "format": "prettier --write .",
+    "knip": "knip"
   },
   "keywords": [
     "cli",
