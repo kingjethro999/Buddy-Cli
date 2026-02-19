@@ -1,0 +1,58 @@
+{
+  "name": "buddy-cli",
+  "version": "0.2.9",
+  "description": "Buddy — Your AI-powered desktop CLI assistant. Answer questions, run commands, manage files, take notes, and more.",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "buddy": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --clean",
+    "dev": "tsup src/index.ts --format esm --watch",
+    "prepublishOnly": "npm run build",
+    "start": "node dist/index.js",
+    "prepare": "husky"
+  },
+  "keywords": [
+    "cli",
+    "assistant",
+    "ai",
+    "gemini",
+    "terminal",
+    "productivity",
+    "buddy"
+  ],
+  "author": "",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "boxen": "^8.0.1",
+    "chalk": "^5.6.2",
+    "commander": "^14.0.3",
+    "figlet": "^1.10.0",
+    "fs-extra": "^11.3.3",
+    "glob": "^13.0.5",
+    "inquirer": "^13.2.5",
+    "marked": "^17.0.3",
+    "marked-terminal": "^7.3.0",
+    "ora": "^9.3.0"
+  },
+  "devDependencies": {
+    "@types/figlet": "^1.7.0",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^25.3.0",
+    "husky": "^9.1.7",
+    "knip": "^5.84.1",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.8.1",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  }
+}
